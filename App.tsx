@@ -36,7 +36,6 @@ export default function App() {
       <Header />
       <Interact />
       <NavBar />
-
     </View>
   );
 }
@@ -46,25 +45,24 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffdbc2',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   header: {
-    flex: 1,
     alignItems: 'center',
     borderWidth: 1,
+    height: WINDOW_HEIGHT * 0.1,
     width: WINDOW_WIDTH,
   },
   interact: {
-    flex: 1,
     alignItems: 'center',
     borderWidth: 1,
+    height: WINDOW_HEIGHT * 0.8,
     width: WINDOW_WIDTH,
   },
   navbar: {
-    flex: 1,
-    justifyContent: 'flex-end',
     alignItems: 'center',
     borderWidth: 1,
+    height: WINDOW_HEIGHT * 0.1,
     width: WINDOW_WIDTH,
   },
 
