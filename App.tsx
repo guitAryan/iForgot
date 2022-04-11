@@ -33,6 +33,7 @@ function NavBar() {
 export default function App() {
   return (
     <View style={styles.default}>
+      <StatusBar translucent={false} style="light" />
       <Header />
       <Interact />
       <NavBar />
