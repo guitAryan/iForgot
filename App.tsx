@@ -2,39 +2,10 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Button, ScrollView, StyleSheet, Text, TextInput, View, Dimensions } from 'react-native';
+import Header from './components/Header'
+import Interact from './components/Interact';
+import NavBar from './components/Navbar';
 
-const WINDOW_WIDTH = Dimensions.get('window').width;
-const WINDOW_HEIGHT = Dimensions.get('window').height;
-
-function Header(title: string) {
-  return (
-    <View style={styles.header}>
-      <Text>Header Area: {title}</Text>
-
-    </View>
-  )
-}
-
-function Interact() {
-  return (
-    <View style={styles.interact}>
-      <Text>Interaction Area: </Text>
-    </View>
-  )
-}
-
-function NavBar() {
-
-  return (
-    <View style={styles.navbar}>
-      <Button
-        title='Home'
-        onPress={() => Header('Home')}
-
-      />
-    </View>
-  )
-}
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState("Home")
@@ -42,7 +13,7 @@ export default function App() {
   return (
     <View style={styles.default}>
       <StatusBar translucent={false} style="light" />
-      <Header {...currentScreen} />
+      <Header />
       <Interact />
       <NavBar />
     </View>
@@ -55,23 +26,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff5e3',
     alignItems: 'center',
     justifyContent: 'flex-start',
-  },
-  header: {
-    alignItems: 'center',
-    backgroundColor: '#cceaff',
-    height: WINDOW_HEIGHT * 0.1,
-    width: WINDOW_WIDTH,
-  },
-  interact: {
-    alignItems: 'center',
-    height: WINDOW_HEIGHT * 0.8,
-    width: WINDOW_WIDTH,
-  },
-  navbar: {
-    alignItems: 'center',
-    backgroundColor: '#cceaff',
-    // position: 'absolute'
-    height: WINDOW_HEIGHT * 0.1,
-    width: WINDOW_WIDTH,
   },
 });
