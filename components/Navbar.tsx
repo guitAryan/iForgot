@@ -7,7 +7,7 @@ const NavBar = () => {
         <View style={styles.navbar}>
             <Button
                 title='Home'
-                onPress={() => console.log("This button works")}
+                onPress={() => 1}
             />
         </View>
     )

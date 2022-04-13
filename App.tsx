@@ -9,6 +9,7 @@ import NavBar from './components/Navbar';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState("Home")
+  console.log("HEY BITCHES");
 
   return (
     <View style={styles.default}>
