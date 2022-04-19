@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Text, View, StyleSheet, Dimensions, Button, } from 'react-native';
 
-const NavBar = () => {
+export const NavBar = () => {
     return (
         <View style={styles.navbar}>
             <Button
@@ -21,5 +21,3 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
     },
 })
-
-export default NavBar;

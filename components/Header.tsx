@@ -2,10 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { Text, View, StyleSheet, Dimensions, } from 'react-native';
 
-const Header = () => {
+export const Header = () => {
     return (
         <View style={styles.header}>
-            <Text>Header Area: </Text>
+            <Text>Header Area</Text>
 
         </View>
     )
@@ -13,11 +13,9 @@ const Header = () => {
 
 const styles = StyleSheet.create({
     header: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         backgroundColor: '#cceaff',
         height: Dimensions.get('window').height * 0.1,
         width: Dimensions.get('window').width,
     },
 })
-
-export default Header;
